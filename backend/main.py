@@ -15,7 +15,10 @@ app = FastAPI(lifespan=lifespan)
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://ai-canvas-frontend.vercel.app"],
+    allow_origins=[
+        "https://ai-canvas-frontend.vercel.app",
+        "http://canvas-ai.senaabhishek.com",
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
