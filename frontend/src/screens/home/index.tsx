@@ -208,10 +208,6 @@ export default function Home() {
         ctx.stroke();
     };
 
-    const runRoute = () => {
-        sendData();
-    };
-
     return (
         <>
             <div className="grid grid-cols-3 gap-2 bg-gray-500">
@@ -249,7 +245,7 @@ export default function Home() {
                     <Draggable
                         key={index}
                         defaultPosition={latexPosition}
-                        onStop={(e, data) =>
+                        onStop={(_e, data) =>
                             setLatexPosition({ x: data.x, y: data.y })
                         }
                     >
