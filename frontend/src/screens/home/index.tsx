@@ -89,16 +89,7 @@ export default function Home() {
         const canvas = canvasRef.current;
         console.log(`${import.meta.env.VITE_API_URL}/evaluate`);
         if (!canvas) return;
-        /*
-        const response = await axiox.({
-            method: "post",
-            url: `${import.meta.env.VITE_API_URL}/evaluate`,
-            data: {
-                image: canvas.toDataURL("image/png"),
-                dict_of_vars: dictOfVars,
-            },
-        });
-*/
+
         axios
             .post(`${import.meta.env.VITE_API_URL}/evaluate`, {
                 image: canvas.toDataURL("image/png"),
