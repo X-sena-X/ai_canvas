@@ -17,7 +17,7 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "https://ai-canvas-frontend.vercel.app",
-        "http://canvas-ai.senaabhishek.com",
+        "https://canvas-ai.senaabhishek.com",
     ],
     allow_credentials=True,
     allow_methods=["*"],
